@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Refugio Bar - Experiencias Únicas</title>
+    <meta name="description" content="El mejor bar de la ciudad. Cócteles únicos, ambiente acogedor y música en vivo. ¡Ven y vive la experiencia!">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-inter">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-amber-400 font-playfair">El Refugio</h1>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="text-white hover:text-amber-400 transition-colors">Inicio</a>
+                    <a href="#servicios" class="text-white hover:text-amber-400 transition-colors">Servicios</a>
+                    <a href="#sobre-nosotros" class="text-white hover:text-amber-400 transition-colors">Nosotros</a>
+                    <a href="#testimonios" class="text-white hover:text-amber-400 transition-colors">Testimonios</a>
+                    <a href="#contacto" class="text-white hover:text-amber-400 transition-colors">Contacto</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-white hover:text-amber-400">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="#inicio" class="text-white hover:text-amber-400 transition-colors">Inicio</a>
+                    <a href="#servicios" class="text-white hover:text-amber-400 transition-colors">Servicios</a>
+                    <a href="#sobre-nosotros" class="text-white hover:text-amber-400 transition-colors">Nosotros</a>
+                    <a href="#testimonios" class="text-white hover:text-amber-400 transition-colors">Testimonios</a>
+                    <a href="#contacto" class="text-white hover:text-amber-400 transition-colors">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10"></div>
+        <div class="absolute inset-0 hero-bg"></div>
+        
+        <div class="relative z-20 text-center text-white max-w-4xl mx-auto px-4">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 font-playfair animate-fade-in-up">
+                Bienvenido a <span class="text-amber-400">El Refugio</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 animate-fade-in-up animation-delay-300">
+                Donde cada trago cuenta una historia y cada noche es una aventura
+            </p>
+            <div class="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center animate-fade-in-up animation-delay-600">
+                <a href="#servicios" class="inline-block bg-amber-500 hover:bg-amber-600 text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105">
+                    Descubre Nuestros Cócteles
+                </a>
+                <a href="#contacto" class="inline-block border-2 border-white hover:bg-white hover:text-black text-white font-semibold px-8 py-4 rounded-full transition-all duration-300">
+                    Reserva Tu Mesa
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
+            <div class="animate-bounce">
+                <i class="fas fa-chevron-down text-white text-2xl"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 font-playfair">Nuestros Servicios</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Ofrecemos una experiencia completa que combina los mejores cócteles, ambiente único y entretenimiento de primera clase
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="h-48 bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center">
+                        <i class="fas fa-cocktail text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-3">Cócteles Artesanales</h3>
+                        <p class="text-gray-300 mb-4">
+                            Creaciones únicas preparadas por nuestros mixólogos expertos con ingredientes premium y técnicas innovadoras.
+                        </p>
+                        <ul class="text-gray-400 space-y-1">
+                            <li>• Cócteles clásicos y autorales</li>
+                            <li>• Ingredientes frescos y premium</li>
+                            <li>• Presentación espectacular</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="h-48 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center">
+                        <i class="fas fa-music text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-3">Música en Vivo</h3>
+                        <p class="text-gray-300 mb-4">
+                            Disfruta de las mejores bandas locales y DJs que crean el ambiente perfecto para cada ocasión.
+                        </p>
+                        <ul class="text-gray-400 space-y-1">
+                            <li>• Bandas en vivo los fines de semana</li>
+                            <li>• DJ sets temáticos</li>
+                            <li>• Karaoke los jueves</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="h-48 bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center">
+                        <i class="fas fa-utensils text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-3">Gastronomía</h3>
+                        <p class="text-gray-300 mb-4">
+                            Deliciosos platos y aperitivos que complementan perfectamente nuestros cócteles y bebidas.
+                        </p>
+                        <ul class="text-gray-400 space-y-1">
+                            <li>• Tapas gourmet</li>
+                            <li>• Platos principales</li>
+                            <li>• Postres artesanales</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="h-48 bg-gradient-to-br from-red-500 to-pink-600 flex items-center justify-center">
+                        <i class="fas fa-calendar-alt text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-3">Eventos Privados</h3>
+                        <p class="text-gray-300 mb-4">
+                            Organizamos celebraciones únicas y memorables para cumpleaños, despedidas y eventos corporativos.
+                        </p>
+                        <ul class="text-gray-400 space-y-1">
+                            <li>• Reservas de área completa</li>
+                            <li>• Menús personalizados</li>
+                            <li>• Decoración temática</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
+                        <i class="fas fa-clock text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-3">Happy Hour</h3>
+                        <p class="text-gray-300 mb-4">
+                            Disfruta de precios especiales en nuestros mejores cócteles y aperitivos durante nuestro happy hour.
+                        </p>
+                        <ul class="text-gray-400 space-y-1">
+                            <li>• Lunes a viernes 5-7 PM</li>
+                            <li>• 2x1 en cócteles seleccionados</li>
+                            <li>• Aperitivos con descuento</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="h-48 bg-gradient-to-br from-yellow-500 to-orange-600 flex items-center justify-center">
+                        <i class="fas fa-star text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-3">Experiencia VIP</h3>
+                        <p class="text-gray-300 mb-4">
+                            Servicio exclusivo con mesa reservada, atención personalizada y acceso a nuestra carta premium.
+                        </p>
+                        <ul class="text-gray-400 space-y-1">
+                            <li>• Mesa reservada toda la noche</li>
+                            <li>• Servicio de botella</li>
+                            <li>• Cócteles premium exclusivos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre-nosotros" class="py-20 bg-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 font-playfair">Nuestra Historia</h2>
+                    <p class="text-xl text-gray-300 mb-6">
+                        Desde 2018, El Refugio ha sido el punto de encuentro favorito para quienes buscan una experiencia única en la ciudad. 
+                        Nacimos con la visión de crear un espacio donde la creatividad, la calidad y la hospitalidad se fusionen para ofrecer 
+                        momentos inolvidables.
+                    </p>
+                    <p class="text-lg text-gray-400 mb-8">
+                        Nuestro equipo de mixólogos expertos trabaja constantemente para innovar y sorprender con nuevas creaciones, 
+                        mientras mantenemos la esencia que nos ha convertido en un referente de la vida nocturna local.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-amber-400 mb-2">5+</div>
+                            <div class="text-gray-300">Años de Experiencia</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-amber-400 mb-2">50+</div>
+                            <div class="text-gray-300">Cócteles Únicos</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-amber-400 mb-2">1000+</div>
+                            <div class="text-gray-300">Clientes Satisfechos</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-amber-400 mb-2">24/7</div>
+                            <div class="text-gray-300">Pasión por el Servicio</div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contacto" class="inline-block bg-amber-500 hover:bg-amber-600 text-black font-semibold px-8 py-3 rounded-full transition-all duration-300">
+                        Conoce Más
+                    </a>
+                </div>
+                
+                <div class="relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <div class="h-48 bg-gradient-to-br from-amber-500 to-orange-600 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-cocktail text-4xl text-white"></i>
+                            </div>
+                            <div class="h-32 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-music text-3xl text-white"></i>
+                            </div>
+                        </div>
+                        <div class="space-y-4 mt-8">
+                            <div class="h-32 bg-gradient-to-br from-green-500 to-teal-600 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-users text-3xl text-white"></i>
+                            </div>
+                            <div class="h-48 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-heart text-4xl text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonios" class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 font-playfair">Lo Que Dicen Nuestros Clientes</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Las experiencias de nuestros clientes son nuestra mejor carta de presentación
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-amber-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4 italic">
+                        "El Refugio es simplemente increíble. Los cócteles son una obra de arte y el ambiente es perfecto para una noche especial. ¡Definitivamente volveremos!"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold">MR</span>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-semibold">María Rodríguez</h4>
+                            <p class="text-gray-400 text-sm">Cliente Frecuente</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-amber-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4 italic">
+                        "Celebré mi cumpleaños aquí y fue perfecto. El servicio es excepcional y la música en vivo le da un toque especial. Altamente recomendado."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold">CL</span>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-semibold">Carlos López</h4>
+                            <p class="text-gray-400 text-sm">Evento Privado</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-amber-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4 italic">
+                        "Los mixólogos son verdaderos artistas. Cada cóctel es una experiencia única. El ambiente es sofisticado pero acogedor. ¡Mi lugar favorito!"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold">AG</span>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-semibold">Ana García</h4>
+                            <p class="text-gray-400 text-sm">Amante de Cócteles</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-amber-500 to-orange-600">
+        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-bold text-black mb-6 font-playfair">
+                ¿Listo para Vivir la Experiencia?
+            </h2>
+            <p class="text-xl text-black/80 mb-8">
+                Reserva tu mesa ahora y descubre por qué somos el bar favorito de la ciudad. 
+                Cada noche es una nueva aventura esperándote.
+            </p>
+            <div class="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center">
+                <a href="#contacto" class="inline-block bg-black hover:bg-gray-800 text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105">
+                    Reservar Mesa
+                </a>
+                <a href="tel:+1234567890" class="inline-block border-2 border-black hover:bg-black hover:text-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300">
+                    Llamar Ahora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-20 bg-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 font-playfair">Contáctanos</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Estamos aquí para hacer de tu experiencia algo inolvidable. Contáctanos para reservas o cualquier consulta.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-6">Información de Contacto</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-black"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">Dirección</h4>
+                                <p class="text-gray-300">Av. Principal 123, Centro Histórico<br>Ciudad, País 12345</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-phone text-black"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">Teléfono</h4>
+                                <p class="text-gray-300">+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-envelope text-black"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">Email</h4>
+                                <p class="text-gray-300">info@elrefugiobar.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-clock text-black"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">Horarios</h4>
+                                <p class="text-gray-300">
+                                    Lunes - Jueves: 6:00 PM - 2:00 AM<br>
+                                    Viernes - Sábado: 6:00 PM - 3:00 AM<br>
+                                    Domingo: 6:00 PM - 1:00 AM
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Media -->
+                    <div class="mt-8">
+                        <h4 class="text-white font-semibold mb-4">Síguenos</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center hover:bg-amber-600 transition-colors">
+                                <i class="fab fa-facebook-f text-black"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center hover:bg-amber-600 transition-colors">
+                                <i class="fab fa-instagram text-black"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center hover:bg-amber-600 transition-colors">
+                                <i class="fab fa-twitter text-black"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center hover:bg-amber-600 transition-colors">
+                                <i class="fab fa-tiktok text-black"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-6">Envíanos un Mensaje</h3>
+                    
+                    <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="nombre" class="block text-white font-medium mb-2">Nombre *</label>
+                                <input type="text" id="nombre" name="nombre" required 
+                                       class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-amber-500 transition-colors">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-white font-medium mb-2">Email *</label>
+                                <input type="email" id="email" name="email" required 
+                                       class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-amber-500 transition-colors">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="telefono" class="block text-white font-medium mb-2">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono" 
+                                   class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-amber-500 transition-colors">
+                        </div>
+                        
+                        <div>
+                            <label for="asunto" class="block text-white font-medium mb-2">Asunto *</label>
+                            <select id="asunto" name="asunto" required 
+                                    class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-amber-500 transition-colors">
+                                <option value="">Selecciona un asunto</option>
+                                <option value="reserva">Reserva de Mesa</option>
+                                <option value="evento">Evento Privado</option>
+                                <option value="consulta">Consulta General</option>
+                                <option value="feedback">Comentarios</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="mensaje" class="block text-white font-medium mb-2">Mensaje *</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" required 
+                                      class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-amber-500 transition-colors resize-vertical"></textarea>
+                        </div>
+                        
+                        <button type="submit" 
+                                class="w-full bg-amber-500 hover:bg-amber-600 text-black font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-2xl font-bold text-amber-400 mb-4 font-playfair">El Refugio</h3>
+                    <p class="text-gray-300 mb-4">
+                        Más que un bar, somos tu refugio perfecto para crear momentos inolvidables. 
+                        Ven y descubre por qué somos el lugar favorito de la ciudad.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-amber-400 transition-colors">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-amber-400 transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-amber-400 transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-amber-400 transition-colors">
+                            <i class="fab fa-tiktok text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="text-gray-400 hover:text-amber-400 transition-colors">Inicio</a></li>
+                        <li><a href="#servicios" class="text-gray-400 hover:text-amber-400 transition-colors">Servicios</a></li>
+                        <li><a href="#sobre-nosotros" class="text-gray-400 hover:text-amber-400 transition-colors">Nosotros</a></li>
+                        <li><a href="#testimonios" class="text-gray-400 hover:text-amber-400 transition-colors">Testimonios</a></li>
+                        <li><a href="#contacto" class="text-gray-400 hover:text-amber-400 transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contacto</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Av. Principal 123</li>
+                        <li>Centro Histórico</li>
+                        <li>+1 (555) 123-4567</li>
+                        <li>info@elrefugiobar.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2024 El Refugio Bar. Todos los derechos reservados. | 
+                    <a href="#" class="hover:text-amber-400 transition-colors">Política de Privacidad</a> | 
+                    <a href="#" class="hover:text-amber-400 transition-colors">Términos de Servicio</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/1234567890?text=Hola,%20me%20gustaría%20hacer%20una%20reserva%20en%20El%20Refugio" 
+       target="_blank" 
+       class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110"
+       id="whatsapp-btn">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" 
+            class="fixed bottom-6 left-6 z-50 bg-amber-500 hover:bg-amber-600 text-black p-3 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110 opacity-0 invisible">
+        <i class="fas fa-chevron-up text-xl"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
